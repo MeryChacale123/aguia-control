@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel Admin - Clube Águia</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="fundo-admin">
+
+    <div class="admin-container">
+        <aside class="sidebar-admin">
+            <div class="logo-admin">
+                <img src="img/logo-aguia.png" alt="Logo Águia">
+                <span>Comando Águia</span>
+            </div>
+            <nav class="links-admin">
+                <a href="#" class="active"><i class="fas fa-chart-line"></i> Dashboard</a>
+                <a href="#"><i class="fas fa-users"></i> Gerir Membros</a>
+                <a href="#"><i class="fas fa-file-invoice"></i> Atividades</a>
+                <a href="#"><i class="fas fa-cog"></i> Configurações</a>
+            </nav>
+        </aside>
+
+        <main class="conteudo-admin">
+            <header class="topo-admin">
+                <h2>Painel de Gestão</h2>
+                <div class="perfil-admin-topo">
+                    <span>Olá, <strong>Diretor</strong></span>
+                    <img src="img/admin-avatar.jpg" alt="Admin">
+                </div>
+            </header>
+
+            <section class="cards-resumo">
+                <div class="card-mini">
+                    <i class="fas fa-user-plus"></i>
+                    <div>
+                        <h3>128</h3>
+                        <p>Total Membros</p>
+                    </div>
+                </div>
+                <div class="card-mini">
+                    <i class="fas fa-shield-alt"></i>
+                    <div>
+                        <h3>12</h3>
+                        <p>Unidades Ativas</p>
+                    </div>
+                </div>
+                <div class="card-mini">
+                    <i class="fas fa-star"></i>
+                    <div>
+                        <h3>45</h3>
+                        <p>Especialidades</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="lista-membros">
+                <div class="cabecalho-tabela">
+                    <h3>Membros Cadastrados</h3>
+                    <input type="text" placeholder="Pesquisar desbravador..." id="searchMembros">
+                </div>
+                
+                <div class="tabela-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Foto</th>
+                                <th>Nome</th>
+                                <th>Cargo</th>
+                                <th>Unidade</th>
+                                <th>Contacto</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="img/membro1.jpg" class="img-tabela"></td>
+                                <td>João Silva</td>
+                                <td><span class="tag cargo">Capitão</span></td>
+                                <td>Águias Reais</td>
+                                <td>+244 923...</td>
+                                <td>
+                                    <button class="btn-edit"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-del"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+<script type="module" src="gestao.js"></script>
+</body>
+</html>

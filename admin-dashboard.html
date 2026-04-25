@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>ÁGUIA CONTROL | Centro de Comando</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="painel-admin-corpo">
+
+    <div class="wrapper-comando">
+        <aside class="sidebar-aguia">
+            <div class="logo-area">
+                <img src="img/logo-clube.png" alt="Logo Águia">
+                <h2>ÁGUIA <span>CONTROL</span></h2>
+            </div>
+
+            <nav class="nav-principal">
+                <p class="nav-label">GERAL</p>
+                <a href="admin-dashboard.html" class="nav-link active"><i class="fas fa-th-large"></i> Dashboard</a>
+                <a href="usuarios.html" class="nav-link"><i class="fas fa-user-shield"></i> Usuários do Site</a> <a href="gestao_membros.html" class="nav-link"><i class="fas fa-users"></i> Gestão de Membros</a>
+                
+                <p class="nav-label">CONTEÚDO E MÍDIA</p>
+               <a href="central-galeria.html" class="nav-link"><i class="fas fa-images"></i> Editar Galeria</a>
+               <a href="central-noticias.html" class="nav-link"><i class="fas fa-newspaper"></i> Gestão de Notícias</a>
+                
+                <p class="nav-label">OPERACIONAL</p>
+                <a href="central-operacional.html" class="nav-link"><i class="fas fa-music"></i> Ensaios</a>
+                <a href="central-operacional.html" class="nav-link"><i class="fas fa-calendar-check"></i> Reuniões</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="index.html" class="logout"><i class="fas fa-power-off"></i> Sair do Sistema</a>
+            </div>
+        </aside>
+
+        <main class="espaco-trabalho">
+            <header class="barra-topo-premium">
+                <div class="busca-comando">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Pesquisar desbravador ou notícia...">
+                </div>
+
+                <div class="admin-perfil-fixed">
+                    <div class="info-admin">
+                        <strong>Diretor Geral</strong>
+                        <span>Online</span>
+                    </div>
+                    <img src="img/admin-avatar.jpg" alt="Admin" class="avatar-admin">
+                </div>
+            </header>
+
+            <section class="container-dashboard">
+    <div class="grid-stats">
+        <div class="stat-card">
+            <div class="icon-stat azul"><i class="fas fa-users"></i></div>
+           <div class="card">
+    <h2 id="total-membros">0</h2> <p>Membros Totais</p>
+</div>
+            <div class="icon-stat verde"><i class="fas fa-user-check"></i></div>
+            <div><h3>24</h3><p>Online Agora</p></div>
+        </div>
+        <div class="stat-card">
+            <div class="icon-stat ouro"><i class="fas fa-star"></i></div>
+            <div><h3>12</h3><p>Especialidades</p></div>
+        </div>
+    </div>
+
+    <div class="layout-comando-duplo">
+        
+        <div class="coluna-principal">
+            <div class="card-painel-branco">
+                <div class="header-card">
+                    <h3><i class="fas fa-newspaper"></i> Notícias do Clube</h3>
+                    <button class="btn-acao-topo">+ Criar Notícia</button>
+                </div>
+                <div class="lista-itens-admin">
+                    <div class="item-linha">
+                        <img src="img/noticia1.jpg" alt="Campori">
+                        <div class="info">
+                            <strong>Inscrições Campori 2026 abertas!</strong>
+                            <span>Publicado há 1 hora por Admin</span>
+                        </div>
+                        <div class="botoes-mini">
+                            <button class="edit"><i class="fas fa-pen"></i></button>
+                            <button class="del"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-painel-branco mt-20">
+                <h3><i class="fas fa-user-shield"></i> Últimos Usuários Registrados</h3>
+                <div class="tabela-compacta">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Usuário</th>
+                                <th>Tipo</th>
+                                <th>Acesso</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                         <tbody id="tabela-real">
+    </tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="coluna-lateral">
+            <div class="card-painel-premium">
+                <h3><i class="fas fa-calendar-alt"></i> Próximos Ensaios</h3>
+                <div class="agenda-mini">
+                    <div class="data-box">
+                        <span class="dia">12</span>
+                        <span class="mes">MAR</span>
+                    </div>
+                    <div class="detalhe-ensaio">
+                        <strong>Ensaio de ordem unida</strong>
+                        <p>15:00h - Local: campo</p>
+                    </div>
+                </div>
+            </div>
+
+           <div class="card-painel-premium mt-20">
+  <h3><i class="fas fa-tools"></i> Atalhos de Edição</h3>
+  <div class="botoes-grid">
+    <button class="btn-quick" id="btn-galeria"><i class="fas fa-image"></i> Galeria</button>
+    <button class="btn-quick" id="btn-alerta"><i class="fas fa-bullhorn"></i> Alerta</button>
+    <button class="btn-quick" id="btn-adra"><i class="fas fa-file-alt"></i> ADRA</button>
+    <button class="btn-quick" id="btn-perfil"><i class="fas fa-cog"></i> Perfil</button>
+  </div>
+</div>
+
+    </div>
+</section>
+        </main>
+    </div>
+    
+<script src="reunioes.js"></script>
+</body>
+</html>

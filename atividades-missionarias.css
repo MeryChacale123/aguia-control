@@ -1,0 +1,113 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container-especialidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.titulo-principal {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+/* Divisor com a linha verde igual à captura */
+.divisor-categoria {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.divisor-categoria .linha {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #2e7d32; /* Verde oficial */
+}
+
+.divisor-categoria h2 {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    color: #1a237e; /* Azul escuro */
+    font-weight: bold;
+}
+
+/* Grid de Especialidades */
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.card-esp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.card-esp:hover {
+    transform: translateY(-5px);
+}
+
+/* Tamanho controlado para as imagens não quebrarem o layout */
+.card-esp img {
+    width: 130px; 
+    height: 130px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.codigo-esp {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #000;
+    margin: 5px 0;
+}
+
+.nome-esp {
+    font-size: 0.85rem;
+    color: #444;
+    line-height: 1.2;
+    max-width: 150px;
+}
+/* Botão Voltar Estilo Profissional */
+.btn-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    background-color: #f0f2f5; /* Cor de fundo clara igual à captura */
+    color: #1a237e; /* Azul escuro do texto */
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px; /* Bordas arredondadas */
+    border: 1px solid #dcdcdc;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.btn-voltar span {
+    margin-right: 5px;
+    font-size: 1rem;
+}
+
+.btn-voltar:hover {
+    background-color: #e0e4e8;
+    transform: translateX(-3px); /* Pequeno efeito de movimento */
+}
+
+/* Ajuste no container para o título não bater no botão */
+.container-especialidades {
+    padding-top: 60px; /* Dá espaço para o botão não ficar por cima do título */
+}

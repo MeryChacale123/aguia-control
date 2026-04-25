@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Membros - Clube Águia</title>
+    <link rel="stylesheet" href="style.css?v=2.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="body-admin-central">
+
+    <aside class="sidebar-admin">
+        <div class="perfil-admin-resumo">
+            <img src="" alt="Admin" id="fotoAdmin">
+            <h3 id="nomeAdminLogado">Carregando...</h3>
+            <span>Nível: Comando Geral</span>
+        </div>
+        <nav class="menu-lateral">
+            <a href="painel-admin.html"><i class="fas fa-home"></i> Início</a>
+            <a href="lista-membros.html" class="active"><i class="fas fa-users"></i> Gerenciar Membros</a>
+            <a href="login-admin.html" onclick="localStorage.removeItem('adminLogado')"><i class="fas fa-sign-out-alt"></i> Sair</a>
+        </nav>
+    </aside>
+
+    <main class="conteudo-principal-admin">
+    <div class="nav-admin">
+        <span>Central de Comando > Membros</span>
+    </div>
+
+    <section class="card-tabela">
+        <h2><i class="fas fa-users"></i> Gestão de Desbravadores</h2>
+        
+        <table class="tabela-aguia">
+            <thead>
+                <tr>
+                    <th>Perfil</th>
+                    <th>Nome Completo</th>
+                    <th>Classe Atual</th>
+                    <th>Unidade</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="corpoTabela">
+                </tbody>
+        </table>
+    </section>
+</main>
+    <script src="admin.js"></script>
+    <footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="https://facebook.com/clube aguia-central-cuito"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>
+</body>
+</html>

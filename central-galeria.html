@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Central de Galeria - Águia Control</title>
+    <link rel="stylesheet" href="central-galeria.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="galeria-wrapper">
+        <header class="header-premium">
+            <h1 class="gold-text">GESTÃO DE GALERIA</h1>
+            <p>Publique Fotos dos Eventos na Galeria Geral</p>
+            
+            <div class="upload-zone" onclick="document.getElementById('file-input').click()">
+                <i class="fas fa-cloud-upload-alt"></i>
+                <p>Clique ou arraste fotos para o sistema</p>
+                <input type="file" id="file-input" accept="image/*" hidden>
+            </div>
+            
+            <div id="upload-status" class="status-barra"></div>
+        </header>
+
+        <div id="grid-galeria-admin" class="mosaico-admin">
+            </div>
+    </div>
+
+    <script type="module" src="central-galeria.js"></script>
+</body>
+</html>
+<footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>

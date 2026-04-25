@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Administrativo - Clube Águia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .body-login {
+            background: linear-gradient(rgba(0,35,71,0.9), rgba(0,35,71,0.9)), url('img/capa1.jpg');
+            height: 100vh; display: flex; align-items: center; justify-content: center;
+        }
+        .login-box {
+            background: white; padding: 40px; border-radius: 15px; text-align: center;
+            width: 350px; box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+        }
+        .login-box h2 { color: #002347; margin-bottom: 20px; }
+        .login-box input {
+            width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #ddd; border-radius: 8px;
+        }
+        .btn-logar {
+            background: #ffcc00; color: #002347; border: none; width: 100%;
+            padding: 12px; font-weight: bold; border-radius: 8px; cursor: pointer;
+        }
+    </style>
+</head>
+<body class="body-login">
+    <div class="login-box">
+    <i class="fas fa-user-shield" style="font-size: 3rem; color: #002347;"></i>
+    <h2>PAINEL DO COMANDANTE</h2>
+    
+    <input type="text" id="usuario" placeholder="Usuário Único" required>
+    
+    <input type="password" id="senha" placeholder="Senha de Acesso" required>
+    
+    <button type="button" onclick="validarAcesso()" class="btn-logar">ENTRAR NO SISTEMA</button>
+    
+    <p id="mensagem-erro" style="color: red; margin-top: 10px; display: none;">Usuário ou Senha Incorretos!</p>
+    
+    <p style="margin-top: 15px; font-size: 0.8rem;"><a href="index.html">Sair e voltar ao site</a></p>
+</div>
+
+<script>
+    function validarAcesso() {
+        var user = document.getElementById('usuario').value;
+        var pass = document.getElementById('senha').value;
+
+        // DEFINA AQUI A SUA SENHA E USUÁRIO
+        // Sugestão: Usuario: admin | Senha: aguia2026
+        if (user === "admin" && pass === "aguia2026") {
+            window.location.href = "admin-dashboard.html";
+        } else {
+            document.getElementById('mensagem-erro').style.display = 'block';
+        }
+    }
+</script>
+<footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="https://facebook.com/clube aguia-central-cuito"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>
+</body>
+</html>

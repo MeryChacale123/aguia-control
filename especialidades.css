@@ -1,0 +1,256 @@
+/* Configuração Geral da Página */
+body {
+    background-color: #ffffff !important; /* Força o fundo branco puro em tudo */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Use a fonte do seu site */
+}
+
+/* Espaçamento para o conteúdo não colar no header fixo */
+.secao-especialidades {
+    max-width: 1200px; /* Largura máxima idêntica ao site de referência */
+    margin: 80px auto; /* Dá espaço para o header */
+    padding: 0 20px;
+}
+
+/* Estilização do Texto Superior */
+.intro-texto {
+    text-align: center;
+    margin-bottom: 60px; /* Espaço antes da grelha */
+}
+
+.intro-texto h1 {
+    color: #002347; /* Azul escuro do seu clube */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.intro-texto p {
+    color: #555;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 15px; /* Centraliza o bloco de texto */
+}
+
+.destaque-biblico {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin: 30px 0;
+    display: inline-block;
+}
+
+/* Configuração da Grelha (3 colunas) */
+.grelha-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas de tamanhos iguais */
+    gap: 40px; /* Espaço entre os cards idêntico ao da imagem */
+}
+
+/* Estilo de cada Card Individual */
+.card-item {
+    background-color: #ffffff;
+    border: 1px solid #eeeeee; /* Borda suave para dar destaque no branco */
+    border-radius: 8px; /* Cantos levemente arredondados */
+    overflow: hidden; /* Garante que a imagem siga o arredondado */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efeito suave ao passar o rato */
+}
+
+/* Efeito ao passar o rato (hover) */
+.card-item:hover {
+    transform: translateY(-5px); /* Eleva o card suavemente */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+}
+
+/* Estilo da Imagem dentro do Card */
+.card-item img {
+    width: 100%; /* Ocupa toda a largura do card */
+    height: auto;
+    display: block; /* Remove espaços brancos extra abaixo da imagem */
+}
+
+/* Estilo do Título (Texto) dentro do Card */
+.card-item h3 {
+    margin: 0;
+    padding: 20px; /* Respiro interno para o texto */
+    font-size: 1rem;
+    color: #002347; /* Azul escuro do clube */
+    text-transform: uppercase; /* Força texto em maiúsculas como na foto */
+    font-weight: bold;
+}
+.conteudo-detalhado {
+    background-color: #f4f4f4; /* Fundo cinza claro para destacar a folha branca */
+    padding: 120px 20px 50px;
+    min-height: 100vh;
+}
+
+.container-branco {
+    background-color: #ffffff; /* Fundo branco puro como na imagem */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.cabecalho-especialidade {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.img-icone {
+    width: 150px; /* Tamanho do escudo da especialidade */
+    margin-bottom: 20px;
+}
+
+.btn-voltar {
+    display: inline-block;
+    margin-bottom: 30px;
+    text-decoration: none;
+    color: #002347;
+    font-weight: bold;
+}
+
+.requisitos ol li {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+/* Fundo Cinematic Dark */
+body {
+    background: #0d0d0d; /* Preto profundo */
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    padding: 40px 20px;
+}
+
+/* Cabeçalho de Categoria Premium */
+.categoria-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.categoria-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    background: linear-gradient(90deg, #2e7d32, #4caf50);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.subtitulo {
+    color: #888;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Grade de Especialidades */
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+/* Card Estilo "Glassmorphism" Executivo */
+.card-esp {
+    background: rgba(255, 255, 255, 0.03); /* Vidro transparente */
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 25px 15px;
+    text-align: center;
+    backdrop-filter: blur(10px); /* Efeito de desfoque atrás */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Brilho ao passar o mouse */
+.card-esp:hover {
+    transform: translateY(-12px) scale(1.05);
+    background: rgba(46, 125, 50, 0.1);
+    border-color: #4caf50;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4), 0 0 20px rgba(76, 175, 80, 0.2);
+}
+
+/* Imagem da Especialidade com Sombra Projetada */
+.card-esp img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 0 8px rgba(0,0,0,0.5));
+    transition: 0.3s;
+}
+
+.card-esp:hover img {
+    filter: drop-shadow(0 0 15px rgba(76, 175, 80, 0.6));
+}
+
+/* Codificação Estilo Tag Militar */
+.codigo {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #4caf50;
+    background: rgba(76, 175, 80, 0.15);
+    padding: 4px 12px;
+    border-radius: 50px;
+    display: inline-block;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+/* Nome da Especialidade */
+.nome {
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #e0e0e0;
+    line-height: 1.4;
+}
+/* Ajuste de Tipografia e Alinhamento */
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 colunas fixas como na referência */
+    gap: 40px 15px; /* Mais espaço vertical para não sufocar o texto */
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Estilo do Código (O "AM 001") */
+.codigo {
+    font-family: 'Arial Black', sans-serif; /* Mais grosso e imponente */
+    font-size: 10px;
+    color: #000;
+    margin: 8px 0 3px 0;
+    text-transform: uppercase;
+}
+
+/* Estilo do Nome da Especialidade */
+.nome {
+    font-family: 'Arial', sans-serif;
+    font-size: 11px;
+    color: #555; /* Cinza médio profissional */
+    font-weight: 500;
+    line-height: 1.2;
+    max-width: 140px; /* Evita que o texto espalhe muito */
+}
+
+/* Efeito nas Badges */
+.card-esp img {
+    width: 105px; /* Tamanho exato das insígnias */
+    height: auto;
+    transition: transform 0.2s;
+    filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.1));
+}
+
+.card-esp:hover img {
+    transform: scale(1.1); /* Zoom suave ao passar o mouse */
+}
+@media (max-width: 768px) {
+    .especialidades-grid { grid-template-columns: repeat(3, 1fr); }
+}

@@ -1,0 +1,87 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 20px;
+}
+
+.container-especialidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.divisor-domesticas {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.divisor-domesticas .linha {
+    flex: 1;
+    height: 3px;
+    background-color: #FBC02D;
+}
+
+.divisor-domesticas h2 {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    color: #F57F17;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 40px 15px;
+    justify-items: center;
+}
+
+.card-esp {
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card-esp:hover {
+    transform: scale(1.08);
+}
+
+.card-esp img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+}
+
+.codigo {
+    font-size: 0.75rem;
+    font-weight: 800;
+    color: #F57F17;
+    margin: 5px 0 0 0;
+}
+
+.nome {
+    font-size: 0.85rem;
+    color: #444;
+    font-weight: 600;
+    margin-top: 3px;
+}
+
+.btn-voltar {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    padding: 8px 18px;
+    background-color: #FFFDE7;
+    color: #F57F17;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #FFF9C4;
+}

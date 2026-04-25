@@ -1,0 +1,142 @@
+:root {
+    --primaria: #ffcc00;
+    --fundo: #01080e;
+    --card: rgba(255, 255, 255, 0.03);
+    --borda: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--fundo);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+}
+
+.galeria-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR */
+.sidebar-filtros {
+    width: 280px;
+    background: rgba(255,255,255,0.02);
+    border-right: 1px solid var(--borda);
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+}
+
+.logo-area { display: flex; align-items: center; gap: 10px; margin-bottom: 50px; }
+.logo-area img { width: 40px; }
+
+.menu-filtros { display: flex; flex-direction: column; gap: 10px; flex-grow: 1; }
+/* EFEITO DE VIDA NA SIDEBAR */
+.menu-filtros button {
+    position: relative;
+    background: transparent;
+    border: none;
+    color: #888;
+    text-align: left;
+    padding: 15px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* O brilho quando passa o rato */
+.menu-filtros button:hover {
+    color: #fff;
+    background: rgba(255, 204, 0, 0.1);
+    transform: translateX(5px);
+}
+
+/* Estilo do Botão Ativo (Selecionado) */
+.menu-filtros button.active {
+    background: #ffcc00;
+    color: #01080e;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.4);
+    transform: translateX(8px);
+}
+
+/* Ícone animado no ativo */
+.menu-filtros button.active i {
+    transform: scale(1.2);
+    color: #01080e;
+}
+
+/* Pequeno traço indicador lateral */
+.menu-filtros button.active::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 25%;
+    height: 50%;
+    width: 4px;
+    background: #01080e;
+    border-radius: 0 4px 4px 0;
+}
+.voltar-btn {
+    text-decoration: none; color: #ff4444; font-weight: bold;
+    padding: 15px; border-top: 1px solid var(--borda);
+}
+
+/* GRID BENTO (O Coração do Design) */
+.grid-bento {
+    margin-left: 280px;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 200px;
+    gap: 20px;
+    width: 100%;
+}
+
+.bento-item {
+    position: relative;
+    background: var(--card);
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--borda);
+    transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
+}
+
+/* Variações de Tamanho */
+.grande { grid-column: span 2; grid-row: span 2; }
+.vertical { grid-row: span 2; }
+.larga { grid-column: span 2; }
+
+.bento-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    opacity: 0.6; transition: 0.5s;
+}
+
+.bento-item:hover { transform: scale(1.02); border-color: var(--primaria); z-index: 10; }
+.bento-item:hover img { opacity: 1; transform: scale(1.1); }
+
+/* Overlay de Informação */
+.bento-overlay {
+    position: absolute; bottom: 0; left: 0; width: 100%;
+    padding: 25px; background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    pointer-events: none;
+}
+
+.tag {
+    background: var(--primaria); color: black; font-size: 0.6rem;
+    padding: 4px 10px; border-radius: 6px; font-weight: 800;
+}
+
+/* Viewer */
+.viewer {
+    position: fixed; inset: 0; background: rgba(0,0,0,0.95);
+    display: none; align-items: center; justify-content: center; z-index: 9999;
+}
+.viewer img { max-width: 90%; max-height: 90%; border-radius: 10px; }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Central de Notícias - Águia Control</title>
+    <link rel="stylesheet" href="central-noticias.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="diretorio-wrapper">
+        <header class="diretorio-header">
+            <h1 class="gold-text">CENTRAL DE NOTÍCIAS</h1>
+            <p class="sub-diretorio">Gestão de Comunicados e Alertas</p>
+            
+            <button class="btn-ouro-principal" onclick="mostrarModal()">
+                <i class="fas fa-plus-circle"></i> ADICIONAR NOVA NOTÍCIA
+            </button>
+        </header>
+
+        <div id="lista-noticias-admin" class="grid-premium-usuarios"></div>
+    </div>
+
+    <div id="modal-noticia" class="modal-ouro">
+        <div class="modal-content">
+            <h3 class="gold-text">Nova Publicação</h3>
+            <input type="text" id="titulo-noticia" placeholder="Título da Notícia...">
+            <textarea id="corpo-noticia" rows="5" placeholder="Escreva o conteúdo aqui..."></textarea>
+            
+            <label class="check-urgente">
+                <input type="checkbox" id="check-urgente"> 🚨 MARCAR COMO URGENTE
+            </label>
+
+            <div class="modal-actions">
+                <button onclick="salvarNoticia()" class="btn-confirmar">PUBLICAR</button>
+                <button onclick="fecharModal()" class="btn-cancelar">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="central-noticias.js"></script>
+</body>
+</html>
+<footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>

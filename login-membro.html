@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Águia Sistema</title>
+    <link rel="stylesheet" href="adra.css"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body style="background: #f0f2f5; display: flex; justify-content: center; align-items: center; height: 100vh;">
+
+    <div class="main-container" style="max-width: 400px; padding: 40px; text-align: center;">
+        <div class="header-form">
+            <i class="fas fa-user-shield" style="font-size: 3rem; color: #fbc02d; margin-bottom: 15px;"></i>
+            <h2 style="color: #003366;">ÁREA DO MEMBRO</h2>
+            <p>Insira as suas credenciais para entrar</p>
+        </div>
+
+        <div class="input-group" style="margin-top: 25px;">
+            <label><i class="fas fa-user"></i> Usuário</label>
+            <input type="text" id="login_user" placeholder="Nome do desbravador" required>
+        </div>
+
+        <div class="input-group" style="margin-top: 15px;">
+            <label><i class="fas fa-key"></i> Senha</label>
+            <input type="password" id="login_pass" placeholder="••••••••" required>
+        </div>
+
+        <div class="footer-acoes" style="margin-top: 30px; border: none;">
+            <button class="btn-ouro" style="width: 100%;" onclick="fazerLogin()">
+                ENTRAR NO SISTEMA
+            </button>
+        </div>
+        
+        <p style="margin-top: 20px; font-size: 0.9rem;">
+            Ainda não tem conta? <a href="cadastro.html" style="color: #003366; font-weight: bold;">Cadastre-se aqui</a>
+        </p>
+    </div>
+
+    <script src="login.js"></script>
+    <footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="https://facebook.com/clube aguia-central-cuito"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>
+</body>
+</html>

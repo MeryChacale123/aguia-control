@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Central Operacional - Águia Control</title>
+    <link rel="stylesheet" href="central-operacional.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="operacional-wrapper">
+        <header class="header-premium">
+            <h1 class="gold-text">CENTRAL OPERACIONAL</h1>
+            <p>Agendamento de Ensaios e Reuniões de Unidade</p>
+            
+            <div class="botoes-acao">
+                <button class="btn-ouro" onclick="abrirModal('ensaio')">
+                    <i class="fas fa-music"></i> NOVO ENSAIO
+                </button>
+                <button class="btn-ouro" onclick="abrirModal('reuniao')">
+                    <i class="fas fa-calendar-alt"></i> NOVA REUNIÃO
+                </button>
+            </div>
+        </header>
+
+        <div class="quadro-operacional">
+            <section class="coluna-operativa">
+                <h2 class="silver-text">ENSAIOS AGENDADOS</h2>
+                <div id="lista-ensaios" class="lista-eventos"></div>
+            </section>
+            
+            <section class="coluna-operativa">
+                <h2 class="silver-text">PRÓXIMAS REUNIÕES</h2>
+                <div id="lista-reunioes" class="lista-eventos"></div>
+            </section>
+        </div>
+    </div>
+
+    <div id="modal-evento" class="modal-ouro">
+        <div class="modal-content">
+            <h3 id="modal-titulo" class="gold-text">Agendar</h3>
+            <input type="hidden" id="tipo-evento">
+            <input type="text" id="titulo-evento" placeholder="Ex: Ensaio de Fanfarra ou Reunião de Diretoria">
+            <input type="date" id="data-evento">
+            <input type="time" id="hora-evento">
+            <textarea id="pauta-evento" placeholder="Pauta ou Observações importantes..."></textarea>
+            
+            <div class="modal-actions">
+                <button onclick="salvarEvento()" class="btn-confirmar">AGENDAR</button>
+                <button onclick="fecharModal()" class="btn-cancelar">CANCELAR</button>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="central-operacional.js"></script>
+    <footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>
+</body>
+</html>

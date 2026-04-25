@@ -1,0 +1,83 @@
+:root {
+    --fundo-dark: #02060c;
+    --card-bg: #070f1d;
+    --gold: #fbc02d;
+    --silver: #cfd8dc;
+}
+
+body {
+    background-color: var(--fundo-dark);
+    color: white;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    margin: 0;
+}
+
+.header-ensaios {
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 2px solid rgba(251, 192, 45, 0.1);
+}
+
+.gold-text {
+    color: var(--gold);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.grid-ensaios {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.card-ensaio {
+    background: var(--card-bg);
+    border-right: 4px solid var(--gold);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.ensaio-info h3 {
+    margin: 0;
+    color: var(--gold);
+}
+
+.ensaio-meta {
+    font-size: 0.85rem;
+    color: var(--silver);
+    margin-top: 5px;
+}
+
+.badge-ensaio {
+    background: rgba(251, 192, 45, 0.1);
+    color: var(--gold);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border: 1px solid var(--gold);
+}
+
+.btn-voltar-ouro {
+    display: block;
+    width: fit-content;
+    margin: 30px auto;
+    color: var(--gold);
+    text-decoration: none;
+    border: 1px solid var(--gold);
+    padding: 10px 25px;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-voltar-ouro:hover {
+    background: var(--gold);
+    color: black;
+}

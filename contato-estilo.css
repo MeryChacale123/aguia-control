@@ -1,0 +1,147 @@
+:root {
+    --azul-comando: #001a33;
+    --amarelo-aguia: #ffcc00;
+    --cinza-fundo: #f4f7f6;
+}
+
+body { background-color: var(--cinza-fundo); font-family: 'Segoe UI', sans-serif; }
+
+.secao-contato {
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.container-master {
+    display: flex;
+    max-width: 1000px;
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+/* Painel Azul da Esquerda */
+.caixa-info {
+    flex: 1;
+    background: var(--azul-comando);
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.caixa-info h2 { color: var(--amarelo-aguia); font-size: 1.8rem; }
+
+.item-contato { display: flex; align-items: center; gap: 15px; }
+
+.item-contato i {
+    font-size: 1.2rem;
+    color: var(--amarelo-aguia);
+    width: 40px; height: 40px;
+    background: rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 50%;
+}
+
+.item-contato span { display: block; font-weight: bold; font-size: 0.9rem; color: #aaa; }
+
+.item-contato a { color: #fff; text-decoration: none; font-size: 0.9rem; }
+.item-contato a:hover { color: var(--amarelo-aguia); }
+
+/* Redes Sociais */
+.redes-sociais-box { display: flex; gap: 15px; margin-top: 20px; }
+.redes-sociais-box a {
+    color: white; font-size: 1.2rem; transition: 0.3s;
+}
+.redes-sociais-box a:hover { color: var(--amarelo-aguia); transform: scale(1.2); }
+
+/* Formulário da Direita */
+.caixa-form { flex: 1.5; padding: 40px; }
+
+.grupo-input { margin-bottom: 20px; }
+.grupo-input label { display: block; margin-bottom: 8px; font-weight: 600; color: #444; font-size: 0.85rem; }
+
+.grupo-input input, .grupo-input select, .grupo-input textarea {
+    width: 100%; padding: 12px;
+    border: 1px solid #ddd; border-radius: 8px;
+    outline: none; transition: 0.3s;
+}
+
+.grupo-input input:focus { border-color: var(--azul-comando); box-shadow: 0 0 5px rgba(0,26,51,0.2); }
+
+.grupo-duplo { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.btn-enviar {
+    width: 100%;
+    background: var(--azul-comando);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-enviar:hover { background: #003366; letter-spacing: 1px; }
+
+/* Responsividade para Celular */
+@media (max-width: 768px) {
+    .container-master { flex-direction: column; }
+    .grupo-duplo { grid-template-columns: 1fr; }
+}
+/* ANIMAÇÃO E CORES DAS REDES SOCIAIS */
+.redes-sociais-box a {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+    font-size: 1.3rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Hover Individual por Rede */
+.redes-sociais-box a[title*="Facebook"]:hover {
+    background: #1877F2;
+    box-shadow: 0 0 15px #1877F2;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.redes-sociais-box a[title*="WhatsApp"]:hover {
+    background: #25D366;
+    box-shadow: 0 0 15px #25D366;
+    transform: scale(1.1) translateY(-5px);
+}
+
+.redes-sociais-box a[title*="TikTok"]:hover {
+    background: #000000;
+    box-shadow: 0 0 15px #ff0050; /* Sombra Neon característica do TikTok */
+    transform: scale(1.1) translateY(-5px);
+}
+
+/* Efeito de Tooltip (Dica ao passar o mouse) */
+.redes-sociais-box a:after {
+    content: attr(title);
+    position: absolute;
+    bottom: -35px;
+    font-size: 10px;
+    background: #333;
+    padding: 2px 8px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: 0.3s;
+    pointer-events: none;
+    white-space: nowrap;
+}
+
+.redes-sociais-box a:hover:after {
+    opacity: 1;
+    bottom: -30px;
+}

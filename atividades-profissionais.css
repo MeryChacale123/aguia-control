@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #fcfcfc;
+    margin: 0;
+    padding: 20px;
+}
+
+.container-especialidades {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+.titulo-principal {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #222;
+    margin-bottom: 30px;
+}
+
+/* Divisor Vermelho das Atividades Profissionais */
+.divisor-categoria {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.divisor-categoria .linha {
+    flex: 1;
+    height: 3px;
+    background-color: #c62828; /* Vermelho Profissional */
+}
+
+.divisor-categoria h2 {
+    padding: 0 20px;
+    font-size: 1.2rem;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Grelha */
+.especialidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 40px 15px;
+    justify-items: center;
+}
+
+.card-esp {
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.card-esp:hover {
+    transform: translateY(-5px);
+}
+
+/* Domar as imagens para não quebrarem o layout */
+.card-esp img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+.codigo {
+    font-size: 0.7rem;
+    font-weight: 800;
+    color: #000;
+    margin: 0;
+}
+
+.nome {
+    font-size: 0.85rem;
+    color: #555;
+    line-height: 1.2;
+    margin-top: 5px;
+}
+
+/* Botão Voltar */
+.btn-voltar {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 8px 15px;
+    background-color: #fff;
+    color: #333;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

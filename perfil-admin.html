@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <title>Painel do Admin - Clube Águia</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-body">
+
+  <!-- CAPA -->
+  <header class="admin-header">
+    <h1>Painel Administrativo</h1>
+    <p>Clube Águia - Central Cuíto Bié</p>
+  </header>
+
+  <!-- CONTEÚDO -->
+  <main class="admin-dashboard">
+
+    <div class="admin-card destaque">
+      <h2>Total de Membros</h2>
+      <span id="total-membros">0</span>
+    </div>
+
+    <div class="admin-card">
+      <h2>Membros Cadastrados</h2>
+      <ul id="lista-membros">
+        <li>Sem dados ainda</li>
+      </ul>
+    </div>
+
+    <div class="admin-card">
+      <h2>Ações Rápidas</h2>
+      <button onclick="location.href='galeria.html'">Galeria</button>
+      <button onclick="location.href='atividades.html'">Atividades</button>
+      <button onclick="location.href='reunioes.html'">Reuniões</button>
+      <button onclick="location.href='ensaios.html'">Ensaios</button>
+      <div class="admin-card">
+  <h2>Administração</h2>
+  <button onclick="location.href='perfil-admin.html'">Perfil do Admin</button>
+  <button onclick="location.href='gestao-membros.html'">Gestão de Membros</button>
+  <button onclick="location.href='agenda.html'">Agenda</button>
+  <button onclick="location.href='configuracoes.html'">Definições</button>
+  <button onclick="location.href='index.html'">Sair</button>
+</div>
+
+    </div>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+body {
+    background: linear-gradient(135deg, #001a33 0%, #003366 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.card-hino {
+    background: white;
+    width: 100%;
+    max-width: 900px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    overflow: hidden;
+}
+
+.topo-hino {
+    background: #ffcc00;
+    padding: 30px;
+    text-align: center;
+    color: #001a33;
+}
+
+.logo-hino { width: 80px; margin-bottom: 10px; }
+
+.conteudo-flex {
+    display: flex;
+    padding: 40px;
+    gap: 40px;
+}
+
+/* PLAYER */
+.player-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid #eee;
+}
+
+.disco-visual {
+    width: 150px;
+    height: 150px;
+    background: #001a33;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    border: 5px solid #ffcc00;
+    animation: pulsar 2s infinite;
+}
+
+.controles-audio { width: 100%; text-align: center; }
+.controles-audio p { font-weight: bold; margin-bottom: 15px; color: #666; }
+audio { width: 100%; filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%); }
+
+/* LETRA */
+.letra-hino { flex: 1.5; }
+.letra-hino h3 { color: #001a33; margin-bottom: 20px; border-bottom: 2px solid #ffcc00; display: inline-block; }
+.texto-letra { line-height: 1.6; color: #444; height: 300px; overflow-y: auto; padding-right: 10px; }
+
+@keyframes pulsar {
+    0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 204, 0, 0.4); }
+    70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(255, 204, 0, 0); }
+    100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 204, 0, 0); }
+}
+
+@media (max-width: 768px) {
+    .conteudo-flex { flex-direction: column; }
+    .player-section { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 30px; }
+}
+/* ESTILO DO BOTÃO DE BAIXAR NO HINO */
+.area-download-hino {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-baixar-hino {
+    background: #001a33;
+    color: #ffcc00;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    border: 2px solid #001a33;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-baixar-hino:hover {
+    background: #ffcc00;
+    color: #001a33;
+    transform: scale(1.05);
+}
+
+.btn-baixar-hino i {
+    font-size: 1.1rem;
+}
+
+.tamanho-arquivo {
+    font-size: 0.75rem;
+    color: #888;
+    font-style: italic;
+}
+
+/* Animação para o ícone de Play quando a música toca */
+.disco-visual.tocando {
+    animation: girar 5s linear infinite;
+    border-color: #ffcc00;
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+/* CONTAINER PRINCIPAL DA LETRA (DENTRO DO BLOCO BRANCO) */
+.letra-hino-container {
+    flex: 1.5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CABEÇALHO DA LETRA (ALINHA O TÍTULO E O BOTÃO) */
+.header-letra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ffcc00; /* Linha amarela de destaque */
+}
+
+.header-letra h3 {
+    color: #001a33;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+/* O NOVO BOTÃO VOLTAR (ELEGANTE E PROFISSIONAL) */
+.btn-voltar-elegante {
+    text-decoration: none;
+    color: #001a33; /* Texto escuro no fundo branco */
+    background: #f4f4f4; /* Fundo cinza muito claro */
+    padding: 8px 15px;
+    border-radius: 50px; /* Arredondado estilo pílula */
+    font-size: 0.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    transition: 0.3s;
+    border: 1px solid #ddd;
+}
+
+.btn-voltar-elegante:hover {
+    background: #ffcc00; /* Muda para o amarelo do clube no hover */
+    color: #001a33;
+    border-color: #ffcc00;
+    transform: translateX(-3px); /* Pequeno movimento para a esquerda */
+}
+
+/* ÁREA DE ROLAGEM DO TEXTO (PARA NÃO CORTAR A LETRA) */
+.texto-letra-rolagem {
+    overflow-y: auto;
+    height: 300px;
+    padding-right: 15px;
+    line-height: 1.8;
+    color: #333;
+}

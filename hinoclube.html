@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Hino Oficial | Clube Águia</title>
+    <link rel="stylesheet" href="estilo-hino.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <section class="container-hino">
+        <div class="card-hino">
+            <div class="topo-hino">
+                <img src="img/logo-clube.png" alt="Logo Águia" class="logo-hino">
+                <h1>HINO DO CLUBE ÁGUIA</h1>
+                <p>Unidade, Coragem e Fé</p>
+            </div>
+
+            <div class="conteudo-flex">
+                <div class="player-section">
+                    <div class="disco-visual">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    
+                    <div class="controles-audio">
+                        <p>OUVIR MELODIA</p>
+                        <audio controls>
+                            <source src="arquivos/hino-clube-aguia.mp3" type="audio/mpeg">
+                            Seu navegador não suporta o player de áudio.
+                        </audio>
+                    </div>
+                </div>
+    <main class="container-hino">
+        <div class="moldura-hino">
+            <i class="fas fa-music icone-musica"></i>
+            <h1>HINO DO Clube Águia</h1>
+            
+            <div class="letra-hino-container">
+    
+    <div class="header-letra">
+        <h3><i class="fas fa-music"></i> Letra</h3>
+        <a href="index.html" class="btn-voltar-elegante">
+            <i class="fas fa-chevron-left"></i> VOLTAR
+        </a>
+    </div>
+
+    <div class="texto-letra-rolagem">
+        <p>Nós somos o clube águia voa voa,<br>
+        a mensagem levar bem alto alcançar!<br>
+        e os campos visionar para colheita ,<br>
+        sem fé com garra lealdade fé e vitória!<br>
+        2X</p>
+        
+        <p>Nós somos o clube águia voa voa,<br>
+        a mensagem levar bem alto alcançar!<br>
+        e os campos visionar para colheita ,<br>
+        sem fé com garra lealdade fé e vitória!</p>
+    </div>
+</div>
+            </div>
+        </div>
+    </section>
+
+        
+</div>
+<script>
+    function alternarPlay() {
+    const audio = document.getElementById('audioHino');
+    const icone = document.getElementById('iconePlay');
+    const disco = document.querySelector('.disco-visual');
+
+    if (audio.paused) {
+        audio.play();
+        icone.classList.replace('fa-play', 'fa-pause');
+        disco.classList.add('tocando'); // Ativa a animação que criamos
+    } else {
+        audio.pause();
+        icone.classList.replace('fa-pause', 'fa-play');
+        disco.classList.remove('tocando');
+    }
+}
+</script>
+</a>
+<footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>
+</body>
+</html>

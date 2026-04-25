@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Contacto | Clube Águia</title>
+    <link rel="stylesheet" href="contato-estilo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <section class="secao-contato">
+        <div class="container-master">
+            
+            <div class="caixa-info">
+                <h2>Canais Oficiais</h2>
+                <p>Precisa de ajuda com inscrições ou materiais? Entre em contacto com a nossa secretaria.</p>
+
+                <div class="item-contato">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <span>Nossa Sede</span>
+                        <p>IASD Central do Cuíto - Bié, Angola</p>
+                    </div>
+                </div>
+
+                <div class="item-contato">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <span>Atendimento Presencial</span>
+                        <p>Domingos: 08:30 às 11:30</p>
+                    </div>
+                </div>
+
+                <div class="item-contato">
+                    <i class="fas fa-globe"></i>
+                    <div>
+                        <span>Página Oficial</span>
+                        <p><a href="https://www.facebook.com/clubeaguiacuito" target="_blank">Clube Águia - Desbravadores Central Cuito / Bié</a></p>
+                    </div>
+                </div>
+
+                <div class="redes-sociais-box">
+    <a href="https://www.facebook.com/clubeaguiacuito" target="_blank" title="Facebook Oficial">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+
+    <a href="https://wa.me/244973522470?text=Olá! Gostaria de informações sobre o Clube Águia." target="_blank" title="Conversar no WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a href="https://www.tiktok.com/@clubeaguiacuito" target="_blank" title="Siga-nos no TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+</div>
+            </div>
+
+            <div class="caixa-form">
+                <form>
+                    <div class="grupo-input">
+                        <label><i class="fas fa-user"></i> Nome Completo</label>
+                        <input type="text" placeholder="Ex: Joaquim Alberto" required>
+                    </div>
+
+                    <div class="grupo-duplo">
+                        <div class="grupo-input">
+                            <label><i class="fas fa-phone"></i> Telefone</label>
+                            <input type="tel" placeholder="+244 9..." required>
+                        </div>
+                        <div class="grupo-input">
+                            <label><i class="fas fa-tag"></i> Assunto</label>
+                            <select>
+                                <option>Inscrição de Novos Membros</option>
+                                <option>Dúvidas sobre Mensalidades</option>
+                                <option>Pedidos de Especialidades</option>
+                                <option>Outros</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grupo-input">
+                        <label><i class="fas fa-envelope-open-text"></i> Sua Mensagem</label>
+                        <textarea rows="5" placeholder="Como podemos ajudar o seu voo?"></textarea>
+                    </div>
+
+                    <form id="formContato">
+    <button type="button" onclick="enviarMensagem()" class="btn-enviar">
+        ENVIAR MENSAGEM <i class="fas fa-paper-plane"></i>
+    </button>
+</form>
+                </form>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="faq-secao">
+        <h2>DÚVIDAS FREQUENTES</h2>
+        <div class="faq-grid">
+            <div class="faq-item">
+                <h4>Qual a idade para participar?</h4>
+                <p>Meninos e meninas de 10 a 15 anos de idade.</p>
+            </div>
+            <div class="faq-item">
+                <h4>Precisa ser da Igreja Adventista?</h4>
+                <p>Não. O Clube é aberto a toda a comunidade, independente de religião.</p>
+            </div>
+        </div>
+    </div>
+</main>
+<script>
+function enviarMensagem() {
+    // 1. Capturar os dados do formulário
+    const nome = document.querySelector('input[placeholder="Ex: Joaquim Alberto"]').value;
+    const telefone = document.querySelector('input[placeholder="+244 9..."]').value;
+    const assunto = document.querySelector('select').value;
+    const mensagem = document.querySelector('textarea').value;
+
+    if(nome === "" || mensagem === "") {
+        alert("Comandante, preencha o nome e a mensagem antes de decolar!");
+        return;
+    }
+
+    // --- PARTE A: ENVIAR PARA O WHATSAPP ---
+    const numeroWhats = "244973522470"; // Formato internacional para Angola
+    const textoFinal = `*NOVO CONTATO - CLUBE ÁGUIA*%0A%0A` +
+                       `*Nome:* ${nome}%0A` +
+                       `*Telefone:* ${telefone}%0A` +
+                       `*Assunto:* ${assunto}%0A` +
+                       `*Mensagem:* ${mensagem}`;
+
+    const linkWhatsapp = `https://wa.me/${numeroWhats}?text=${textoFinal}`;
+    
+    // --- PARTE B: SIMULAR ENVIO PARA O ADMIN ---
+    // Aqui, no futuro, faremos um 'fetch' para o seu servidor.
+    // Por agora, vamos salvar no LocalStorage para o Admin ler no painel.
+    const novaMensagem = {
+        id: Date.now(),
+        remetente: nome,
+        contato: telefone,
+        tema: assunto,
+        texto: mensagem,
+        data: new Date().toLocaleDateString()
+    };
+
+    let mensagensNoAdmin = JSON.parse(localStorage.getItem('mensagensAdmin') || "[]");
+    mensagensNoAdmin.push(novaMensagem);
+    localStorage.setItem('mensagensAdmin', JSON.stringify(mensagensNoAdmin));
+
+    // Executar a decolagem para o WhatsApp
+    window.open(linkWhatsapp, '_blank');
+}
+</script>
+<footer class="rodape-global">
+    <div class="rodape-container">
+        <div class="rodape-info">
+            <img src="img/logo-clube.png" alt="Logo Clube" class="logo-rodape">
+            <p>"Visionar o Campo Para Colheita com Garra, Lealdade, Fé e Victória."</p>
+        </div>
+
+        <div class="rodape-links">
+            <h4>Navegação</h4>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Notícias</a></li>
+                <li><a href="#">Galeria</a></li>
+                <li><a href="cadastro.html">Quero ser Desbravador</a></li>
+            </ul>
+        </div>
+
+        <div class="rodape-social">
+            <h4>Siga-nos</h4>
+            <div class="icones-sociais">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="rodape-bottom">
+        <p>&copy; 2026 Clube Águia - IASD. Todos os direitos reservados.</p>
+        <p class="creditos">Desenvolvido por <span>Chacale Produções</span></p>
+    </div>
+</footer>
+</body>
+</html>

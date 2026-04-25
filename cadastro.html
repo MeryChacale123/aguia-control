@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+   <link rel="icon" href="https://logodownload.org/wp-content/uploads/2021/04/desbravadores-logo-1.png" type="image/logo-clube.png">
+    <title>Cadastro de Membro - Clube Águia</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .form-cadastro { max-width: 600px; margin: 100px auto; background: white; padding: 40px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 8px solid #ffcc00; }
+        .form-cadastro h2 { color: #002347; text-align: center; margin-bottom: 20px; }
+        .input-group { margin-bottom: 15px; }
+        .input-group label { display: block; margin-bottom: 5px; font-weight: bold; }
+        .input-group input, .input-group select { width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 8px; }
+        .btn-enviar-cadastro { background: #002347; color: white; border: none; width: 100%; padding: 15px; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1.1rem; }
+        .btn-enviar-cadastro:hover { background: #ffcc00; color: #002347; }
+    </style>
+ <link rel="icon" href="https://logodownload.org/wp-content/uploads/2021/04/desbravadores-logo-1.png" type="img/logo-clube.png">
+</head>
+<body style="background: #f0f2f5;">
+   <div class="form-cadastro">
+    <h2>FICHA DE INSCRIÇÃO ONLINE</h2>
+    <form id="form-cadastro" class="ficha-form">
+            
+            <fieldset class="secao-card">
+                <legend><i class="fas fa-user-shield"></i> IDENTIDADE DO DESBRAVADOR</legend>
+                
+                <div class="input-group full">
+                    <label>Nome Completo</label>
+                    <input type="text" id="cad_nome" placeholder="Nome completo do membro" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="cad_bairro">Bairro</label>
+                        <input type="text" id="cad_bairro" placeholder="Teu bairro" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="cad_morada">Morada (Rua/Casa)</label>
+                        <input type="text" id="cad_morada" placeholder="Rua X, Casa Y" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="cad_celular">Número de Celular</label>
+                        <input type="tel" id="cad_celular" placeholder="9xx xxx xxx" required>
+                    </div>
+                    <div class="input-group">
+                        <label><i class="fas fa-briefcase"></i> Cargo / Função</label>
+                        <select id="cad_cargo" required>
+                            <option value="">Seleciona o Cargo</option>
+                            <option value="Desbravador">Desbravador</option>
+                            <option value="Conselheiro">Conselheiro</option>
+                            <option value="Diretoria">Diretoria</option>
+                            <option value="Instrutor">Instrutor</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label><i class="fas fa-campground"></i> Unidade Operacional</label>
+                        <select id="cad_unidade" required>
+                            <option value="">-- Selecione sua Unidade --</option>
+                            <optgroup label="ALA FEMININA">
+                                <option value="Águia Veloz">Águia Veloz</option>
+                                <option value="Águia Divina">Águia Divina</option>
+                                <option value="Águia Pesqueira (F)">Águia Pesqueira</option>
+                                <option value="Peregrina">Peregrina</option>
+                                <option value="Águia da Paz">Águia da Paz</option>
+                                <option value="Águia do Esplendor">Águia do Esplendor</option>
+                                <option value="Águia Prateada">Águia Prateada</option>
+                            </optgroup>
+                            <optgroup label="ALA MASCULINA">
+                                <option value="Águia Portadora">Águia Portadora</option>
+                                <option value="Águia Branca">Águia Reluzente</option>
+                                <option value="Águia Pesqueira (M)">Águia Pesqueira</option>
+                                <option value="Águia Reluzente">Águia Reluzente</option>
+                                <option value="Águia Salvadora">Águia Salvadora</option>
+                                <option value="Águia da Luz">Águia da Luz</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Data de Nascimento</label>
+                        <input type="date" id="cad_nascimento" required>
+                    </div>
+                </div>
+
+                <div class="input-group full">
+                    <label>Classe Atual</label>
+                    <select id="cad_classe">
+                        <option value="Amigo">Amigo</option>
+                        <option value="Companheiro">Companheiro</option>
+                        <option value="Pesquisador">Pesquisador</option>
+                        <option value="Pioneiro">Pioneiro</option>
+                        <option value="Excursionista">Excursionista</option>
+                        <option value="Guia">Guia</option>
+                         <option value="Líder">Líder</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset class="secao-card">
+                <legend><i class="fas fa-heartbeat"></i> FICHA MÉDICA DE CONTROLE</legend>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Tipo Sanguíneo</label>
+                        <select id="cad_sangue">
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Alergias</label>
+                        <input type="text" id="cad_alergias" placeholder="Ex: Penicilina ou Nenhuma">
+                    </div>
+                </div>
+                <div class="input-group full">
+                    <label>Medicamentos Contínuos</label>
+                    <input type="text" id="cad_remedios" placeholder="Lista de remédios que utiliza">
+                </div> 
+            </fieldset>
+
+            <fieldset class="secao-card">
+                <legend><i class="fas fa-users"></i> VÍNCULO DE RESPONSÁVEL</legend>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label>Nome do Pai ou Mãe</label>
+                        <input type="text" id="cad_responsavel" placeholder="Nome do responsável legal" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Telefone de Emergência</label>
+                        <input type="tel" id="cad_tel_emergencia" placeholder="+244 9XX XXX XXX" required>
+                    </div>
+                </div>
+            </fieldset>
+<div class="footer-acoes">
+    <button type="button" class="btn-cancelar" onclick="history.back()">VOLTAR</button>
+   <button type="button" id="btn-finalizar" onclick="enviarCadastroOficial(event)" class="btn-finalizar">FINALIZAR CADASTRO</button>
+</div>
+            <div class="footer-acoes">
+           
+  <script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-auth-compat.js"></script>
+
+<script src="firebase-config.js"></script>
+<script src="cadastro.js"></script>
+</body>
+</html>

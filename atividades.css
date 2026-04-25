@@ -1,0 +1,82 @@
+:root {
+    --fundo: #050a14;
+    --card: #0a1628;
+    --gold: #fbc02d;
+    --silver: #b0bec5;
+}
+
+body.bg-dark {
+    background-color: var(--fundo);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header-atividades {
+    text-align: center;
+    padding: 50px 20px;
+    background: linear-gradient(to bottom, #071223, var(--fundo));
+}
+
+.gold-text {
+    color: var(--gold);
+    text-shadow: 0 0 15px rgba(251, 192, 45, 0.4);
+    font-size: 2.2rem;
+}
+
+.grid-atividades {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card-missao {
+    background: var(--card);
+    border: 1px solid rgba(251, 192, 45, 0.1);
+    border-radius: 12px;
+    padding: 25px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.card-missao:hover {
+    transform: translateY(-10px);
+    border-color: var(--gold);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.card-missao::before {
+    content: "MISSÃO";
+    position: absolute;
+    top: 10px;
+    right: -20px;
+    background: var(--gold);
+    color: black;
+    font-weight: bold;
+    font-size: 0.6rem;
+    padding: 5px 30px;
+    transform: rotate(45deg);
+}
+
+.btn-voltar {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    padding: 12px 30px;
+    border: 2px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: var(--gold);
+    color: black;
+}

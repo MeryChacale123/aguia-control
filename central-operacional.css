@@ -1,0 +1,121 @@
+body { background: #050a12; color: white; font-family: sans-serif; margin: 0; }
+.operacional-wrapper { padding: 40px; max-width: 1200px; margin: 0 auto; text-align: center; }
+.gold-text { color: #b8860b; font-size: 2.2rem; margin-bottom: 5px; }
+.silver-text { color: #aaa; font-size: 1.2rem; border-bottom: 1px solid #b8860b; padding-bottom: 10px; margin-bottom: 20px; }
+
+.botoes-acao { display: flex; justify-content: center; gap: 20px; margin: 30px 0; }
+.btn-ouro { background: #b8860b; color: white; border: none; padding: 12px 25px; border-radius: 5px; font-weight: bold; cursor: pointer; }
+
+.quadro-operacional { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 30px; }
+
+/* Cards de Evento */
+.evento-card {
+    background: #111;
+    border: 1px solid #333;
+    border-left: 4px solid #b8860b;
+    padding: 15px;
+    text-align: left;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.evento-card h4 { margin: 0 0 5px 0; color: #fff; }
+.evento-card small { color: #b8860b; font-weight: bold; }
+.btn-delete-evento { background: none; border: none; color: #ff4444; float: right; cursor: pointer; }
+
+/* Modal (Reutilizando padrão) */
+.modal-ouro { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 1000; }
+.modal-content { background: #1a1a1a; padding: 30px; border: 2px solid #b8860b; border-radius: 12px; width: 400px; display: flex; flex-direction: column; gap: 15px; }
+.modal-content input, .modal-content textarea { background: #000; border: 1px solid #444; color: white; padding: 10px; border-radius: 5px; }
+/* Estilo das Reuniões */
+.bg-dark {
+    background-color: #050a14;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.page-header {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.gold-text {
+    color: #fbc02d;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(251, 192, 45, 0.3);
+}
+
+.reunioes-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Transformando a lista em Cartões Profissionais */
+.reuniao-card {
+    background: linear-gradient(145deg, #0a1628, #070e1a);
+    border-left: 5px solid #fbc02d;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.reuniao-card:hover {
+    transform: translateX(10px);
+    background: #0d1e35;
+}
+
+.reuniao-info h3 {
+    color: #fbc02d;
+    margin: 0 0 5px 0;
+}
+
+.reuniao-date {
+    background: #fbc02d;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.btn-ouro-voltar {
+    display: inline-block;
+    padding: 10px 25px;
+    border: 2px solid #fbc02d;
+    color: #fbc02d;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 20px auto;
+}
+.evento-item {
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(251, 192, 45, 0.2);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    transition: 0.3s;
+}
+
+.evento-item:hover {
+    background: rgba(251, 192, 45, 0.1);
+}
+
+.evento-data-mini {
+    display: block;
+    font-size: 0.7rem;
+    color: #fbc02d;
+}
+
+.evento-titulo-mini {
+    font-size: 0.9rem;
+    color: white;
+}

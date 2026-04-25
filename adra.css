@@ -1,0 +1,91 @@
+/* Configurações Gerais da Página */
+body {
+    background-color: #ffffff !important; /* Força fundo branco puro */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.secao-adra {
+    max-width: 1200px; /* Largura máxima idêntica ao site de referência */
+    margin: 80px auto; /* Dá espaço para o header */
+    padding: 0 20px;
+}
+
+/* Estilo do Título e Divisor Superior */
+.cabecalho-pagina h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.divisor-titulo {
+    width: 50px;
+    height: 5px;
+    background-color: #777; /* Cor cinza do divisor */
+    margin: 0 auto 40px;
+}
+
+/* Subtítulo ADRA com as Linhas Verdes */
+.subtitulo-categoria {
+    font-size: 2rem;
+    color: #002347; /* Azul escuro do seu clube */
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+/* Criação das linhas verdes decorativas */
+.subtitulo-categoria::before,
+.subtitulo-categoria::after {
+    content: "";
+    flex: 1; /* Faz as linhas preencherem o espaço restante */
+    height: 3px;
+    background-color: #4CAF50; /* Cor verde da referência */
+    margin: 0 20px; /* Espaço entre a linha e o texto "ADRA" */
+}
+
+/* Configuração da Grelha de 6 Colunas (A "Chave de Ouro"!) */
+.grelha-especialidades-detalhe {
+    display: grid;
+    /* Define 6 colunas de tamanhos iguais */
+    grid-template-columns: repeat(6, 1fr); 
+    gap: 20px; /* Espaçamento entre os itens */
+    margin-bottom: 60px;
+}
+
+/* Estilização de cada item individual */
+.item-especialidade {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+/* Garante que os escudos em formato oval/ovo fiquem corretos */
+.item-especialidade img {
+    width: 120px; /* Ajuste o tamanho conforme suas imagens preparedas */
+    height: 160px; /* Mantém a proporção ovalada do escudo da ADRA */
+    object-fit: contain; /* Garante que a imagem inteira apareça sem cortes */
+    margin-bottom: 10px;
+}
+
+/* Texto do Código (Ex: AD 001) */
+.codigo {
+    font-weight: bold;
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0 0 5px 0;
+}
+
+/* Texto da Descrição (Ex: Alívio da fome) */
+.descricao {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.3;
+}
